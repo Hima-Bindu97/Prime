@@ -3,13 +3,14 @@ name : Prime
 on: [push]
 
 jobs:
-  build:
-    # Job name is Greeting
-    name: isPrime
-    # This job runs on Linux
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: is prime or not
     steps:
-    - uses: actions/checkout@v2
-    - uses: ./action
-    - name: checkout
-      uses: actions/setup-node@v1
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: prime action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
