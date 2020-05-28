@@ -26,3 +26,6 @@ function isPrime(n)
   assert(isPrime(12),"Testcase2 passed");
   assert(isPrime(0),"Testcase3 passed");
   assert(isPrime(20),"Testcase4 passed");
+
+
+  console.log("All testcases passed");
